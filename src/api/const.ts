@@ -1,5 +1,7 @@
 const BOOK_API_URL = 'https://openlibrary.org/';
 
+export const BOOK_COVER_IMAGE_API_URL = 'https://covers.openlibrary.org/b/id/';
+
 export enum HTTP {
   GET = 'GET',
   POST = 'POST',

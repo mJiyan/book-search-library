@@ -3,7 +3,6 @@ import { BookDetailsResultType, BookSearchResultType } from "src/redux/actions/B
 
 export const selectors = ({ book, books }: { book: Maybe<BookDetailsResultType>, books: Maybe<BookSearchResultType> }): Maybe<BookDetailsProps> => {
     const selectedBook: BookDetailsProps[] = []
-
     books?.map((element) => {
         if (element.key === book?.key)
             selectedBook.push({

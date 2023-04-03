@@ -6,7 +6,6 @@ const BOOK_SEARCH_RESULT_STORAGE_KEY = "books"
 
 export const getBookSearchResultFromStorage = (): Maybe<BookSearchResultType> => {
     const bookSearchResultJSON = localStorage.getItem(BOOK_SEARCH_RESULT_STORAGE_KEY);
-
     if (bookSearchResultJSON) {
         try {
             return JSON.parse(bookSearchResultJSON);

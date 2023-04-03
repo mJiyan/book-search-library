@@ -1,1 +1,1 @@
-export { searchBooks, getBookDetails } from "./Book";
+export { searchBooks, getBookDetails, type GetBookDetailsProps  } from "./Book";

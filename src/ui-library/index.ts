@@ -12,5 +12,6 @@ export { default as BookDetailsWrapper } from "./BookDetailsWrapper";
 export { default as BookTitle } from "./BookTitle";
 export { default as ImageBoxWrapper } from "./ImageBoxWrapper";
 export { default as BookInformationWrapper } from "./BookInformationWrapper";
+export { default as BookCardWrapper } from "./BookCardWrapper";
 
 export * from "./icons"

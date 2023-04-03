@@ -1,3 +1,5 @@
+import { ReactNode } from "react";
+
 export type Maybe<T> = T | null | undefined;
 
 export type BookType = {
@@ -11,4 +13,7 @@ export type BookType = {
 
 export type BookDetailsProps = Omit<BookType, "key">
 
-export type UIComponentProp = { props?: string }
+export type UIComponentProp = {
+    props?: string
+    children?: ReactNode;
+}

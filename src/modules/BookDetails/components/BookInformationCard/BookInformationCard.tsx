@@ -1,10 +1,10 @@
 import { Link } from "react-router-dom";
 
 import { BookType } from "src/types";
-import { BookInformationWrapper } from "src/ui-library";
+import { BookInformationWrapper, Button } from "src/ui-library";
 
 
-type BookInformationCardProps = Omit<BookType, "key" | "coverImage">
+export type BookInformationCardProps = Omit<BookType, "key" | "coverImage">
 
 const BookInformationCard = ({
     title,
@@ -14,7 +14,7 @@ const BookInformationCard = ({
 }: BookInformationCardProps) => (
     <BookInformationWrapper>
         <h4 className="text-xl font-bold">
-            {title}
+            {title ? title : "--Title is not available--"}
         </h4>
         <p className="mb-8 leading-normal overflow-auto h-auto shadow-sm max-h-32">
             {description ? description : "--Description is not available--"}
@@ -25,13 +25,11 @@ const BookInformationCard = ({
         <p className="pb-4">
             <label className="font-bold">Publish date:</label> {publishDate ? publishDate : "--Publish date information is not available--"}
         </p>
-        <button className="px-4 py-2 text-lg text-WhiteDark bg-DarkBlue rounded shadow 
-        xl:w-1/3 lg:w-1/3 md:w-auto sm:w-auto xs:w-auto
-    ">
+        <Button props="text-lg xl:w-1/3 lg:w-1/3 md:w-auto sm:w-auto xs:w-auto">
             <Link to={"/"}>
                 Back
             </Link>
-        </button>
+        </Button>
     </BookInformationWrapper>
 )
 

@@ -1,10 +1,11 @@
 import { FunctionComponent } from "react"
 
 import { BookList } from "src/modules";
-import { useGetSearchBookState } from "./hooks";
+
+import { storeAndReturnSearchBookState } from "./utils";
 
 const BookListContainer: FunctionComponent = () => {
-    const books = useGetSearchBookState()
+    const books = storeAndReturnSearchBookState()
     return <BookList books={books} />
 }
 

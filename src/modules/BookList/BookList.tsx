@@ -7,7 +7,7 @@ import { BookCard, BlankListPage } from './components';
 const BookList = ({ books }: { books: Maybe<BookSearchResultType> }) => (
   <BookListWrapper>
     {books?.length ? books.map((book) =>
-      <BookCard bookKey={book.key} title={book.title} coverImage={book.coverImage} />
+      <BookCard key={book.key} bookKey={book.key} title={book.title} coverImage={book.coverImage} />
     ) : (
       <BlankListPage />
     )}

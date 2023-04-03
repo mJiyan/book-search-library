@@ -5,7 +5,7 @@ import { HeaderBox, HeaderWrapper, HeaderTitle } from "src/ui-library";
 import { useSearchBooks } from "./hooks";
 import { SearchBox } from "./components"
 
-type HeaderProps = {
+export type HeaderProps = {
     title?: string
 }
 

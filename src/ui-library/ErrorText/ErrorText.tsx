@@ -1,5 +1,5 @@
 
-type ErrorTextProps = {
+export type ErrorTextProps = {
     errorMessage?: string
 }
 

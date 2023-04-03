@@ -1,12 +1,13 @@
 module.exports = {
   verbose: true,
-  testURL:"http://localhost/",
+  testURL: "http://localhost/",
   clearMocks: true,
+  testEnvironment: "jsdom",
   collectCoverage: true,
   collectCoverageFrom: [
-
   ],
-  setupFilesAfterEnv: ['./__test__/setup/setupTest.js'],
+  setupFilesAfterEnv: ['./setupTest.js'],
+  moduleDirectories: ['node_modules', '<rootDir>'],
   globals: {
     'ts-jest': {
       // Tell ts-jest about our typescript config.

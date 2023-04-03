@@ -9,7 +9,7 @@ type OpenLibraryApiCallProps = {
   data: Maybe<string>,
   params: Maybe<string>,
   method: HTTP,
-  headers: Maybe<AxiosRequestHeaders>
+  headers: any
 }
 
 const openLibraryApiCall = async ({ url = '', data = null, params = null, method = HTTP.GET, headers }: OpenLibraryApiCallProps) =>

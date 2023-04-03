@@ -1,7 +1,6 @@
 import { Field } from 'formik';
 
-
-type InputProps = {
+export type InputProps = {
     type?: string
     id?: string
     name?: string

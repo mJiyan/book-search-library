@@ -2,9 +2,7 @@ import { ReactNode } from "react"
 import Error from "./Error"
 import Loader from "./Loader"
 
-export const APP_STATUS_DATA_TEST_ID = "app-status-test"
-
-export interface AppStatusProp {
+export interface AppStatusProps {
     isLoading?: boolean;
     isError?: boolean;
     children?: ReactNode;
@@ -13,9 +11,9 @@ export interface AppStatusProp {
 
 const AppStatus = ({
     isLoading, isError, children, errorMessage
-}: AppStatusProp): JSX.Element => {
+}: AppStatusProps): JSX.Element => {
 
-    return <div data-testid={APP_STATUS_DATA_TEST_ID}>
+    return <div>
         {isLoading && !isError && <Loader />}
         {isError && <Error errorMessage={errorMessage} />}
         {children}

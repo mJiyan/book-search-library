@@ -1,11 +1,11 @@
 import { BookDetails } from "src/modules"
+import { GetBookDetailsProps } from "src/redux/actions"
+
 import { useGetBookDetails } from "./hooks"
 
-type BookDetailsContainerProps = {
+export type BookDetailsContainerProps = {
     match: {
-        params: {
-            worksParameter: string;
-        }
+        params: GetBookDetailsProps
     }
 }
 
@@ -17,7 +17,7 @@ const BookDetailsContainer: React.FC<BookDetailsContainerProps> = (props) => {
         description,
         coverImage,
         publishDate,
-    } = useGetBookDetails(worksParameter);
+    } = useGetBookDetails({ worksParameter });
 
     return (
         <BookDetails
@@ -26,6 +26,7 @@ const BookDetailsContainer: React.FC<BookDetailsContainerProps> = (props) => {
             description={description}
             coverImage={coverImage}
             publishDate={publishDate}
+            data-testid={"qwe"}
         />
     )
 }

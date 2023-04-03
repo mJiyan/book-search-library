@@ -1,5 +1,7 @@
+export const LOAING_SPINNER_TESTID = "loading-spinner-testid"
+
 const LoadingSpinner = () => (
-    <div className="absolute bg-white bg-opacity-60 z-10 h-8 w-8 flex items-center justify-center">
+    <div className="absolute bg-white bg-opacity-60 z-10 h-8 w-8 flex items-center justify-center" data-testid={LOAING_SPINNER_TESTID}>
         <div className="flex items-center">
             <svg aria-hidden="true" className="
             xl:w-96 lg:w-96 md:w-96 sm:w-40 xs:w-40

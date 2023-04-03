@@ -5,7 +5,7 @@ import { useDispatch } from 'react-redux';
 import { searchBooks } from "src/redux/actions";
 import { useHistory } from "react-router-dom";
 
-type HandleChangeProps = (values: { search: string; }, formikHelpers: FormikHelpers<{ search: string; }>) => void | Promise<any>
+type HandleChangeProps = (values: { search: string; }, formikHelpers?: FormikHelpers<{ search: string; }>) => void | Promise<any>
 
 const useSearchBooks = () => {
     const [searchParameter, setSearchParameter] = useState<string>("");
@@ -16,7 +16,6 @@ const useSearchBooks = () => {
     const handleChange: HandleChangeProps = async (event) => {
         setSearchParameter(event.search)
         history.push("/");
-
     }
 
     useEffect(() => {

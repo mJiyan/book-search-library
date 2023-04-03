@@ -1,17 +1,18 @@
 import { Link } from 'react-router-dom';
 
+import { BOOK_COVER_IMAGE_API_URL } from 'src/api/const';
 import { BookType } from "src/types";
-import { BookTitle, ImageNotAvailabeIcon, ImageBox, } from 'src/ui-library';
+import { BookCardWrapper, BookTitle, ImageNotAvailabeIcon, ImageBox, } from 'src/ui-library';
 
-type BookCardType = Omit<BookType, "author" | "key" | "description" | "publishDate"> & { bookKey?: string }
+export type BookCardType = Omit<BookType, "author" | "key" | "description" | "publishDate"> & { bookKey?: string }
 
 const BookCard = ({ bookKey, coverImage, title }: BookCardType) => (
-    <div key={bookKey} className="xl:w-40 lg:w-40 md:w-40 sm:w-24 xs:w-24">
-        <Link to={`${bookKey}`}>
+    <BookCardWrapper key={bookKey}>
+        <Link key={bookKey} to={`${bookKey}`}>
             {coverImage ?
                 (
                     <ImageBox>
-                        <img src={`https://covers.openlibrary.org/b/id/${coverImage}-M.jpg`} />
+                        <img src={`${BOOK_COVER_IMAGE_API_URL}${coverImage}-M.jpg`} alt="coverImage" />
                     </ImageBox>
                 ) :
                 (
@@ -24,10 +25,10 @@ const BookCard = ({ bookKey, coverImage, title }: BookCardType) => (
                 )
             }
             <BookTitle>
-                {title}
+                {title ? title : "--Title is not available--"}
             </BookTitle>
         </Link>
-    </div>
+    </BookCardWrapper>
 );
 
 
