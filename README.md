@@ -13,16 +13,10 @@ Also added Webpack and Babel, in order to increase the appliction performance.
 Added Eslint, and Prettier. Also, added Husky in order to prevent pushing badly formatted codes.
 
 ## Table of Contents
-- [Project Overview](#projectoverview)
 - [Installation](#installation)
 - [Test](#test)
 - [Support](#support)
 - [Contributing](#contributing)
-
-
-### ProjectOverview
-
-A short overview of the project
 
 
 ## Installation
