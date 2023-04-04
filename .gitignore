@@ -33,8 +33,12 @@ node_modules
 # Runtime configuration for swagger app
 config/runtime.yaml
 
-.DS_Store 
 
 yarn.lock
-client/._.DS_Store
-server/._.DS_Store
+.DS_Store
+
+.vscode
+
+build
+
+

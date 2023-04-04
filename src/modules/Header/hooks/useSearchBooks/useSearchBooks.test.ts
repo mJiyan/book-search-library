@@ -21,8 +21,7 @@ describe(useSearchBooks.name, () => {
     it("should return a function to enable redux call for getting books from API with search parameter", async () => {
         const useEffectSpy = jest.spyOn(React, 'useEffect').mockReturnValueOnce();
 
-        const { result: { current } } = renderHook(() => useSearchBooks())
-        console.log("current: ", current)
+        renderHook(() => useSearchBooks())
 
         await wait(1000)
 

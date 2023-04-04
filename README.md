@@ -1,46 +1,56 @@
-# Getting Started with Create React App
+# Listing and Searching the Book list using OpenLibrary API - Ninebarc Code Challenge
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a list application and it is created to show coding skills to the Ninebarc (company).
 
-## Available Scripts
+Created the project using Typescript and Redux(Thunk). 
 
-In the project directory, you can run:
+Used the Tailwind, in order to, create responsive designs. I used Tailwind because it is really easy to use and it increases the readability of the codes.
 
-### `npm start`
+Wrote unit tests for the project components using react-testing-libraries.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Also added Webpack and Babel, in order to increase the appliction performance.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Added Eslint, and Prettier. Also, added Husky in order to prevent pushing badly formatted codes.
 
-### `npm test`
+## Table of Contents
+- [Project Overview](#projectoverview)
+- [Installation](#installation)
+- [Test](#test)
+- [Support](#support)
+- [Contributing](#contributing)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+### ProjectOverview
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+A short overview of the project
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Installation
 
-### `npm run eject`
+```sh
+git clone https://github.com/mJiyan/book-search-library.git
+cd book-search-library
+yarn
+yarn start
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Open your browser at http://0.0.0.0:8080 
+```
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## Test
+```sh
+git clone https://github.com/mJiyan/book-search-library.git
+cd book-search-library
+yarn
+yarn test
+```
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Learn More
+## Support
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Please [open an issue](https://github.com/mJiyan/book-search-library/issues) for support & suggestions.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+
+## Contributing
+
+Please contribute using [Github Flow](https://guides.github.com/introduction/flow/). Create a branch, add commits, and [open a pull request](https://github.com/mJiyan/book-search-library/compare).
