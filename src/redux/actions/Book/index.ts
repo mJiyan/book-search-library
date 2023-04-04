@@ -98,31 +98,3 @@ export const getBookDetails = ({ worksParameter }: GetBookDetailsProps) => async
     });
   }
 };
-
-
-/**
- *  const data: BookSearchResultType = await openLibraryApiCall(
-      {
-        url: `${BOOK_API_END_POINT}search.json?q=${searchParameter}&page=${pageNumber}`,
-        data: null,
-        params: null,
-        method: HTTP.GET,
-        headers: {}
-      }
-    )
-      .then(({ data }) => {
-        const searchBookArray = Object
-          .keys(data.docs)
-          .map((key) => {
-            return {
-              title: data.docs[key]?.title,
-              key: data.docs[key]?.key,
-              author: data.docs[key]?.author_name?.[0],
-              coverImage: data.docs[key]?.cover_i,
-            };
-          })
-
-        const searchBookArrayWithFoundedItemCount = { ...searchBookArray, numFound: data?.numFound };
-        return searchBookArrayWithFoundedItemCount;
-      })
- */
